@@ -47,7 +47,7 @@ if __name__ == '__main__':
         data = json.load(f)
 
     nodes = data['nodes']
-    text_nodes = [node['text'] for node in nodes][:5]
+    text_nodes = [node['text'] for node in nodes]
 
     node_embeddings = get_node_embeddings(text_nodes, args.batch_size)
     np.save(args.save_path, node_embeddings)
