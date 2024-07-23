@@ -33,8 +33,8 @@ def get_node_embeddings(nodes, batch_size=24):
                           max_length=256, padding=True)
         output = model(**input.to(device))
         embeddings = average_pool(output.last_hidden_state, input['attention_mask'])
-        node_embeddings.append(embeddings)
-    return torch.cat(node_embeddings).detach().cpu().numpy()
+        node_embeddings.append(embeddings.detach().cpu())
+    return torch.cat(node_embeddings).numpy()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
