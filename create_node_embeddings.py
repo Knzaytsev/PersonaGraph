@@ -14,7 +14,12 @@ def get_node_embeddings(nodes, batch_size=24):
         last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
         return last_hidden.sum(dim=1) / attention_mask.sum(dim=1)[..., None]
 
-    device = torch.device("mps")
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device('cpu')
 
     model_name = "intfloat/multilingual-e5-large"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -26,7 +31,7 @@ def get_node_embeddings(nodes, batch_size=24):
         input = tokenizer(list(map(lambda x: 'query: ' + x, batch)), 
                           truncation=True, return_tensors="pt", 
                           max_length=256, padding=True)
-        output = model(**input.to(device))  # device = "cuda:0" or "cpu"
+        output = model(**input.to(device))
         embeddings = average_pool(output.last_hidden_state, input['attention_mask'])
         node_embeddings.append(embeddings)
     return torch.cat(node_embeddings).detach().cpu().numpy()
@@ -42,7 +47,7 @@ if __name__ == '__main__':
         data = json.load(f)
 
     nodes = data['nodes']
-    text_nodes = [node['text'] for node in nodes]
+    text_nodes = [node['text'] for node in nodes][:5]
 
     node_embeddings = get_node_embeddings(text_nodes, args.batch_size)
     np.save(args.save_path, node_embeddings)
