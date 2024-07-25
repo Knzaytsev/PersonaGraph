@@ -66,7 +66,7 @@ def similar_edges(cluster, model, tokenizer, entail_idx, threshold=0.8, batch_si
     
     edges = []
     batches = gen_batch(combinations, batch_size=batch_size,)
-    for batch in tqdm(batches, total=len(combinations) // batch_size + 1):
+    for batch in batches:
         input = tokenizer([from_['text'] for from_, _ in batch],
                           [to_['text'] for _, to_ in batch], 
                           truncation=True, return_tensors="pt", 
