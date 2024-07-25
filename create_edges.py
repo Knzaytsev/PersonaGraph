@@ -48,10 +48,7 @@ def equal_edges(nodes):
                 edges.append((node['id'], eq_node))
     return edges
 
-def similar_edges(cluster, model_name, entail_idx, threshold=0.8, batch_size=24):
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
-
+def similar_edges(cluster, model, tokenizer, entail_idx, threshold=0.8, batch_size=24):
     combinations = []
     cache = dict()
     for row in cluster.to_dict('records'):
@@ -63,13 +60,13 @@ def similar_edges(cluster, model_name, entail_idx, threshold=0.8, batch_size=24)
                 cache[node['id']] = []
             
             if row['id'] not in cache[node['id']] and node['id'] not in cache[row['id']]:
-                row['id'].append(node['id'])
-                node['id'].append(row['id'])
+                cache[row['id']].append(node['id'])
+                cache[node['id']].append(row['id'])
                 combinations.append((row, node))
     
     edges = []
-    batches = gen_batch(combinations, batch_size=batch_size)
-    for batch in tqdm(batches, total=len(nodes) // batch_size + 1):
+    batches = gen_batch(combinations, batch_size=batch_size,)
+    for batch in tqdm(batches, total=len(combinations) // batch_size + 1):
         input = tokenizer([from_['text'] for from_, _ in batch],
                           [to_['text'] for _, to_ in batch], 
                           truncation=True, return_tensors="pt", 
@@ -136,8 +133,10 @@ if __name__ == '__main__':
     nodes['clusters'] = nodes['id'].map(clusters_mapping)
 
     tqdm.pandas(desc='cluster edges')
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(args.model_name).to(device)
     sim_edges = nodes[nodes['clusters'].notna()].groupby('clusters')
-    sim_edges = sim_edges.progress_apply(lambda x: similar_edges(x, args.model_name, args.entail_idx)).tolist()
+    sim_edges = sim_edges.progress_apply(lambda x: similar_edges(x, model, tokenizer, args.entail_idx)).tolist()
     sim_edges = [edge for edges in sim_edges for edge in edges]
     print(len(sim_edges))
 
@@ -145,7 +144,7 @@ if __name__ == '__main__':
     print(len(edges))
 
     G = networkx.Graph()
-    G.add_nodes_from(list_nodes)
+    G.add_nodes_from((node.pop('id'), node) for node in list_nodes)
     G.add_edges_from(edges)
 
     data = networkx.node_link.node_link_data(G)
