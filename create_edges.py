@@ -1,0 +1,153 @@
+import json
+import os
+import argparse
+import networkx
+from src.persona_graph import PersonaNode
+import re
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoModel
+import torch
+import pandas as pd
+import itertools
+from tqdm import tqdm
+
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+elif torch.backends.mps.is_available():
+    device = torch.device("mps")
+else:
+    device = torch.device('cpu')
+
+def read_raw(folders, file_name):
+    raw = []
+    for folder in folders:
+        path = os.path.join(folder, file_name)
+        if os.path.exists(path):
+            file = [{**json.loads(line), 'session_id': re.search(r'(session_\d)', path).group()} 
+                    for line in open(path).readlines()]
+            raw.extend(file)
+    return raw
+
+def gen_batch(x, batch_size=64):
+    for i in range(0, len(x), batch_size):
+        yield x[i:i+batch_size]
+
+def equal_edges(nodes):
+    edges = []
+    cache = dict()
+    for _, node in nodes.iterrows():
+        if node['id'] not in cache:
+            cache[node['id']] = []
+        eq_nodes = nodes.loc[nodes['convai2_id'] != node['convai2_id'], 'id'].tolist()
+        for eq_node in eq_nodes:
+            if eq_node not in cache:
+                cache[eq_node] = []
+            
+            if node['id'] not in cache[eq_node] and eq_node not in cache[node['id']]:
+                cache[eq_node].append(node['id'])
+                cache[node['id']].append(eq_node)
+                edges.append((node['id'], eq_node))
+    return edges
+
+def similar_edges(cluster, model_name, entail_idx, threshold=0.8, batch_size=24):
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
+
+    combinations = []
+    cache = dict()
+    for row in cluster.to_dict('records'):
+        if row['id'] not in cache:
+            cache[row['id']] = []
+        nodes = cluster[cluster['convai2_id'] != row['convai2_id']].to_dict('records')
+        for node in nodes:
+            if node['id'] not in cache:
+                cache[node['id']] = []
+            
+            if row['id'] not in cache[node['id']] and node['id'] not in cache[row['id']]:
+                row['id'].append(node['id'])
+                node['id'].append(row['id'])
+                combinations.append((row, node))
+    
+    edges = []
+    batches = gen_batch(combinations, batch_size=batch_size)
+    for batch in tqdm(batches, total=len(nodes) // batch_size + 1):
+        input = tokenizer([from_['text'] for from_, _ in batch],
+                          [to_['text'] for _, to_ in batch], 
+                          truncation=True, return_tensors="pt", 
+                          max_length=512, padding=True)
+        output = model(**input.to(device))
+
+        probas = torch.softmax(output["logits"], -1)[:, entail_idx]
+        for i, proba in enumerate(probas):
+            if proba > threshold:
+                left, right = batch[i]
+                edges.append((left['id'], right['id']))
+
+    return edges
+
+def consequent_edges(nodes):
+    edges = []
+    prev_idx = None
+    placed_nodes = []
+    for idx, node in nodes.iterrows():
+        # if node['is_placed']:
+        #     placed_nodes.append(node['id'])
+        #     continue
+
+        # if placed_nodes:
+        #     placed_nodes.append(node['id'])
+        #     comb_edges = list(itertools.combinations(placed_nodes, 2))
+        #     edges.extend(comb_edges)
+        if prev_idx is not None:
+            edges.append((prev_idx, node['id']))
+
+        prev_idx = node['id']
+        placed_nodes = []
+    return edges
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--nodes', required=True)
+    parser.add_argument('--cluster_nodes', required=True)
+    parser.add_argument('--model_name', required=True)
+    parser.add_argument('--entail_idx', default=0, type=int)
+    parser.add_argument('--save_path')
+    args = parser.parse_args()
+
+    cluster_nodes = pd.read_csv(args.cluster_nodes)
+    
+    data = json.load(open(args.nodes))
+    list_nodes = data['nodes']
+    nodes = pd.DataFrame(list_nodes)
+    # nodes = nodes.set_index('id')
+    nodes = nodes.sort_values(['convai2_id', 'session_id', 'turn', 'place'])
+    nodes['is_placed'] = nodes.groupby(['convai2_id', 'session_id', 'bot_id', 'turn'])['place'].transform('nunique') > 1
+
+    tqdm.pandas(desc='consequent edges')
+    cons_edges = nodes.groupby('convai2_id').progress_apply(consequent_edges).tolist()
+    cons_edges = [edge for edges in cons_edges for edge in edges]
+    print(len(cons_edges))
+    
+    tqdm.pandas(desc='equal edges')
+    eq_edges = nodes.groupby('text').progress_apply(equal_edges).tolist()
+    eq_edges = [edge for edges in eq_edges for edge in edges]
+    print(len(eq_edges))
+
+    clusters_mapping = {row['id']: row['clusters'] for _, row in cluster_nodes.iterrows()}
+    nodes['clusters'] = nodes['id'].map(clusters_mapping)
+
+    tqdm.pandas(desc='cluster edges')
+    sim_edges = nodes[nodes['clusters'].notna()].groupby('clusters')
+    sim_edges = sim_edges.progress_apply(lambda x: similar_edges(x, args.model_name, args.entail_idx)).tolist()
+    sim_edges = [edge for edges in sim_edges for edge in edges]
+    print(len(sim_edges))
+
+    edges = [*cons_edges, *eq_edges, *sim_edges]
+    print(len(edges))
+
+    G = networkx.Graph()
+    G.add_nodes_from(list_nodes)
+    G.add_edges_from(edges)
+
+    data = networkx.node_link.node_link_data(G)
+    with open(args.save_path, 'w') as f:
+        json.dump(data, f)
