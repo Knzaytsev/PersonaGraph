@@ -118,6 +118,7 @@ if __name__ == '__main__':
     parser.add_argument('--cluster_nodes', required=True)
     parser.add_argument('--model_name', required=True)
     parser.add_argument('--entail_idx', default=0, type=int)
+    parser.add_argument('--batch_size', default=32, type=int)
     parser.add_argument('--save_path')
     args = parser.parse_args()
 
@@ -147,7 +148,7 @@ if __name__ == '__main__':
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
     model = AutoModelForSequenceClassification.from_pretrained(args.model_name).to(device)
     sim_edges = nodes[nodes['clusters'].notna()].groupby('clusters')
-    sim_edges = sim_edges.progress_apply(lambda x: similar_edges(x, model, tokenizer, args.entail_idx)).tolist()
+    sim_edges = sim_edges.progress_apply(lambda x: similar_edges(x, model, tokenizer, args.entail_idx, batch_size=args.batch_size)).tolist()
     sim_edges = [edge for edges in sim_edges for edge in edges]
     print(len(sim_edges))
 
