@@ -150,16 +150,19 @@ if __name__ == '__main__':
     sim_edges = nodes[nodes['clusters'].notna()].groupby('clusters')
     sim_edges = sim_edges.progress_apply(lambda x: similar_edges(x, model, tokenizer, args.entail_idx, batch_size=args.batch_size)).tolist()
     sim_edges = [edge for edges in sim_edges for edge in edges]
-    print(len(sim_edges))
 
     edges = [*cons_edges, *sim_edges]
-    edges = pd.Series(['<|_|>'.join(sorted(edge)) for edge in edges]).drop_duplicates().str.split('<|_|>').tolist()
-    print(len(edges))
+    edges = pd.Series(['<|_|>'.join(sorted(edge)) for edge in edges]).drop_duplicates()
+    edges = edges.str.split('<|_|>', regex=False).apply(tuple)
 
     G = networkx.Graph()
-    G.add_nodes_from((node['text']) for node in list_nodes)
+    G.add_nodes_from((node) for node in set(node['text'] for node in list_nodes))
     G.add_edges_from(edges)
+    print(len(G.edges))
+    print(len(G.nodes))
 
-    data = networkx.node_link.node_link_data(G)
-    with open(args.save_path, 'w') as f:
-        json.dump(data, f)
+    networkx.gexf.write_gexf(G, args.save_path)
+
+    # data = networkx.node_link.node_link_data(G)
+    # with open(args.save_path, 'w') as f:
+    #     json.dump(data, f)
