@@ -35,22 +35,27 @@ if __name__ == '__main__':
         task = 'nli' if 'entailement' in model.config.label2id else 'classification'
 
         with torch.no_grad():
+            all_predictions = []
+            all_labels = []
             for row in tqdm(eval_dataset, desc=path):
-                labels = [0]*len(LABELS)
+                labels = [0]*len(args.labels)
                 for label in row['labels']:
-                    labels[LABELS.index(label)] = 1
+                    labels[args.labels.index(label)] = 1
 
                 if task == 'nli':                    
-                    inputs = tokenizer([row['text']]*len(LABELS), LABELS, truncation=True, padding=True, return_tensors='pt')
+                    inputs = tokenizer([row['text']]*len(args.labels), args.labels, 
+                                       truncation=True, padding=True, return_tensors='pt')
                 else:
                     inputs = tokenizer(row['text'], truncation=True, padding=True, return_tensors='pt')
                     
                 logits = model(**inputs.to(model.device)).logits
-                probas = torch.sigmoid(logits).detach().cpu().numpy()
-                predictions = (probas > 0.5).astype(int)
-
-                print(path)
-                print(classification_report(labels, predictions, labels=LABELS))
-                print('-'*10)
+                probas = torch.sigmoid(logits[0]).detach().cpu().numpy()
+                predictions = (probas > 0.5).astype(int).tolist()
 
 
+                all_predictions.append(predictions)
+                all_labels.append(labels)
+
+            print(path)
+            print(classification_report(all_labels, all_predictions, target_names=args.labels))
+            print('-'*10)
