@@ -15,7 +15,7 @@ def sigmoid(x):
 def compute_metrics(eval_preds):
     logits, labels = eval_preds
 
-    if labels.shape[-1] != 1:
+    if len(labels.shape) > 1 and labels.shape[-1] != 1:
         predictions = sigmoid(logits)
         predictions = (predictions > 0.5).astype(int).reshape(-1)
         labels = labels.astype(int).reshape(-1)
