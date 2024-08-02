@@ -4,20 +4,28 @@ import json
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', required=True)
+    parser.add_argument('--train_data', required=True)
+    parser.add_argument('--val_data', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--test_size', default=.2, type=float)
     args = parser.parse_args()
 
-    if args.dataset.endswith('.jsonl'):
-        data = [json.loads(line) for line in open(args.dataset).readlines()]
+    if args.train_data.endswith('.jsonl'):
+        train = [json.loads(line) for line in open(args.train_data).readlines()]
     else:
         raise NotImplementedError()
     
-    dataset = datasets.Dataset.from_list(data)
-    print(dataset)
+    if args.val_data.endswith('.jsonl'):
+        valid = [json.loads(line) for line in open(args.val_data).readlines()]
+    else:
+        raise NotImplementedError()
+    
+    train = datasets.Dataset.from_list(train)
+    valid = datasets.Dataset.from_list(valid)
 
-    dataset = dataset.train_test_split(args.test_size)
+    dataset = datasets.DatasetDict()
+    dataset['train'] = train
+    dataset['test'] = valid
 
     print(dataset)
 

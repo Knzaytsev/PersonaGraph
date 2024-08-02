@@ -29,12 +29,25 @@ def compute_metrics(eval_preds):
         'recall': recall
     }
 
-def preprocess_data(samples, labels_map, max_len=512):
-    inputs = tokenizer(samples['text'], samples['labels'])
-    
+def preprocess_data(samples, labels_map):
+    if 'target' not in samples:
+        inputs = tokenizer(samples['text'])
+        if isinstance(samples['labels'][0], list):
+            labels = []
+            for all_labels in samples['labels']:
+                sample_labels = [0. for i in range(len(labels_map))]
+                for label in all_labels:
+                    label_id = labels_map[label]
+                    sample_labels[label_id] = 1.
+                labels.append(sample_labels)
+        else:
+            labels = [labels_map[label] for label in samples['labels']]
+    else:
+        inputs = tokenizer(samples['text'], samples['labels'])
+        labels = [labels_map[label] for label in samples['target']]
     return {
         **inputs,
-        'labels': [labels_map[label] for label in samples['target']],
+        'labels': labels,
     }
 
 if __name__ == '__main__':
@@ -44,6 +57,7 @@ if __name__ == '__main__':
     parser.add_argument('--save_path', required=True)
     parser.add_argument('--config', required=True)
     parser.add_argument('--device', default='cuda', choices=['cpu', 'cuda', 'mps'])
+    parser.add_argument('--task', choices=['classification', 'nli'], default='nli')
     args = parser.parse_args()
 
     config = yaml.safe_load(open(args.config, 'r'))
@@ -53,8 +67,23 @@ if __name__ == '__main__':
 
     raw_datasets = datasets.load_from_disk(args.dataset)
 
+    labels = []
+    model_config = {}
+    if args.task == 'classification':
+        labels = model_args['labels']
+
+        label2id = {label: i for i, label in enumerate(labels)}
+        id2label = {i: label for i, label in enumerate(labels)}
+
+        model_config = {'label2id': label2id, 'id2label': id2label}
+
+    if args.task == 'nli':
+        labels_map = model_args['labels_map']
+    else:
+        labels_map = label2id
+
     tokenized_datasets = raw_datasets.map(
-        lambda x: preprocess_data(x, model_args['labels_map']),
+        lambda x: preprocess_data(x, labels_map),
         batched=True,
         remove_columns=raw_datasets["train"].column_names,
     )
@@ -63,6 +92,8 @@ if __name__ == '__main__':
 
     model = AutoModelForSequenceClassification.from_pretrained(
         args.model_path,
+        ignore_mismatched_sizes=True,
+        **model_config,
     ).to(args.device)
 
     training_args = TrainingArguments(
