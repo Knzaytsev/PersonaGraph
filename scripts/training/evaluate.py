@@ -36,27 +36,21 @@ if __name__ == '__main__':
 
         with torch.no_grad():
             for row in tqdm(eval_dataset, desc=path):
-                if task == 'nli':
-                    labels = [0]*len(LABELS)
-                    for label in row['labels']:
-                        labels[LABELS.index(label)] = 1
-                    
-                    inputs = tokenizer([row['text']]*len(LABELS), LABELS, truncation=True, padding=True, return_tensors='pt')
-                    logits = model(**inputs.to(model.device)).logits
-                    probas = torch.sigmoid(logits).detach().cpu().numpy()
-                    predictions = (probas > 0.5).astype(int)
+                labels = [0]*len(LABELS)
+                for label in row['labels']:
+                    labels[LABELS.index(label)] = 1
 
-                    print(path)
-                    print(classification_report(labels, predictions, labels=LABELS))
-                    print('-'*10)
+                if task == 'nli':                    
+                    inputs = tokenizer([row['text']]*len(LABELS), LABELS, truncation=True, padding=True, return_tensors='pt')
                 else:
                     inputs = tokenizer(row['text'], truncation=True, padding=True, return_tensors='pt')
-                    logits = model(**inputs.to(model.device)).logits
-                    probas = torch.sigmoid(logits).detach().cpu().numpy()
-                    predictions = (probas > 0.5).astype(int)
+                    
+                logits = model(**inputs.to(model.device)).logits
+                probas = torch.sigmoid(logits).detach().cpu().numpy()
+                predictions = (probas > 0.5).astype(int)
 
-                    print(path)
-                    print(classification_report(labels, predictions, labels=LABELS))
-                    print('-'*10)
+                print(path)
+                print(classification_report(labels, predictions, labels=LABELS))
+                print('-'*10)
 
 
