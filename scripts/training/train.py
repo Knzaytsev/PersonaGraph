@@ -9,16 +9,18 @@ import numpy as np
 import argparse
 import yaml
 
+def sigmoid(x):
+   return 1/(1 + np.exp(-x))
+
 def compute_metrics(eval_preds):
     logits, labels = eval_preds
-    predictions = np.argmax(logits, axis=-1)
 
-    # Remove ignored index (special tokens) and convert to labels
-    # true_labels = [label_names[l] for label in labels for l in label if l != -100]
-    # true_predictions = [
-    #     label_names[p] for prediction, label in zip(predictions, labels) 
-    #     for (p, l) in zip(prediction, label) if l != -100
-    # ]
+    if labels.shape[-1] != 1:
+        predictions = sigmoid(logits)
+        predictions = (predictions > 0.5).astype(int).reshape(-1)
+        labels = labels.astype(int).reshape(-1)
+    else:
+        predictions = np.argmax(logits, axis=-1)
 
     precision, recall, f1, _ = precision_recall_fscore_support(labels, predictions, average='weighted')
     acc = accuracy_score(labels, predictions)
