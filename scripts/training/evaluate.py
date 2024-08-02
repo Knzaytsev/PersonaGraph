@@ -7,6 +7,7 @@ import argparse
 import yaml
 import torch
 import json
+from tqdm import tqdm
 
 LABELS = [
     'Experiences',
@@ -34,7 +35,7 @@ if __name__ == '__main__':
         task = 'nli' if 'entailement' in model.config.label2id else 'classification'
 
         with torch.no_grad():
-            for row in eval_dataset:
+            for row in tqdm(eval_dataset, desc=path):
                 if task == 'nli':
                     labels = [0]*len(LABELS)
                     for label in row['labels']:
