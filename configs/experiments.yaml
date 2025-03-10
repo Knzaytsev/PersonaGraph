@@ -1,0 +1,134 @@
+n_runs: 10
+n_epochs: 20
+batch_size: 32
+
+save_metrics_path: metrics/runs-small-weighted-graph.jsonl
+
+random_sampled_datasets:
+  interim_output: data/persona_labels/interim/samples
+  processed_output: data/persona_labels/processed/samples
+  ratios:
+    - 0.01
+    - 0.3
+    - 0.5
+    - 0.7
+    - 0.9
+    - 1.0
+
+train_labels: data/persona_labels/interim/train.jsonl
+valid_labels: data/persona_labels/interim/val.jsonl
+
+labels:
+  - 'Experiences'
+  - 'Characteristics'
+  - 'Routines or Habits'
+  - 'Goals or Plans'
+  - 'Relationship'
+
+models:
+  -
+    name: bge-small+graphSAGE
+    type: 'encoder+GNN'
+    graph_data: data/graph_data/small_label_weighted_graph.gexf
+    model_config:
+      encoder:
+        pretrained_model_name_or_path: BAAI/bge-small-en-v1.5
+        add_pooling_layer: false
+      gnn:
+        type: GraphSAGE
+        params:
+          hidden_channels: 256
+          num_layers: 1
+          dropout: 0.75
+          act: relu
+          act_first: true
+          norm: batch_norm
+  -
+    name: bge-small
+    type: 'encoder'
+    model_config:
+      encoder:
+        pretrained_model_name_or_path: BAAI/bge-small-en-v1.5
+      training_args:
+        output_dir: models/BAAI/bge-small-en-v1.5
+        evaluation_strategy: "epoch"
+        save_strategy: "epoch"
+        learning_rate: 0.00002
+        weight_decay: 0.01
+        logging_steps: 100
+        warmup_steps: 0
+        lr_scheduler_type: 'cosine'
+        load_best_model_at_end: True
+        metric_for_best_model: "eval_f1"
+        save_total_limit: 1
+  -
+    name: tf-idf-embeddings+graphSAGE
+    type: 'embeddings+GNN'
+    graph_data: data/graph_data/small_label_weighted_graph.gexf
+    n_epochs: 1000
+    model_config:
+      feature_extractor: 
+        type: tf-idf-vectorizer
+      gnn:
+        type: GraphSAGE
+        params:
+          hidden_channels: 256
+          num_layers: 1
+          dropout: 0.75
+          act: relu
+          act_first: true
+          norm: batch_norm
+  -
+    name: count-embeddings+graphSAGE
+    type: 'embeddings+GNN'
+    graph_data: data/graph_data/small_label_weighted_graph.gexf
+    n_epochs: 1000
+    model_config:
+      feature_extractor: 
+        type: count-vectorizer
+      gnn:
+        type: GraphSAGE
+        params:
+          hidden_channels: 256
+          num_layers: 1
+          dropout: 0.75
+          act: relu
+          act_first: true
+          norm: batch_norm
+  -
+    name: bge-small-embeddings+graphSAGE
+    type: 'embeddings+GNN'
+    graph_data: data/graph_data/small_label_weighted_graph.gexf
+    n_epochs: 1000
+    model_config:
+      feature_extractor: 
+        type: transformer
+        model_path: BAAI/bge-small-en-v1.5
+      gnn:
+        type: GraphSAGE
+        params:
+          hidden_channels: 256
+          num_layers: 1
+          dropout: 0.75
+          act: relu
+          act_first: true
+          norm: batch_norm
+  -
+    name: count-embeddings+plain-linear
+    type: 'embeddings+plain-linear'
+    model_config:
+      feature_extractor: 
+        type: count-vectorizer
+  -
+    name: tf-idf-embeddings+plain-linear
+    type: 'embeddings+plain-linear'
+    model_config:
+      feature_extractor: 
+        type: tf-idf-vectorizer
+  -
+    name: bge-small-embeddings+plain-linear
+    type: 'embeddings+plain-linear'
+    model_config:
+      feature_extractor: 
+        type: transformer
+        model_path: BAAI/bge-small-en-v1.5

@@ -1,0 +1,605 @@
+{"text": "I'm happy to show others how to fly fish.", "labels": ["Characteristics"]}
+{"text": "I live in the states", "labels": ["Experiences"]}
+{"text": "I am not allergic at all.", "labels": ["Characteristics"]}
+{"text": "I like to bike.", "labels": ["Routines or Habits"]}
+{"text": "I've been bicycling lately, which i love.", "labels": ["Routines or Habits"]}
+{"text": "I enjoy watching the underdog succeed.", "labels": ["Characteristics"]}
+{"text": "I have been to Angel falls in Norway.", "labels": ["Experiences"]}
+{"text": "I am flirting.", "labels": ["Characteristics"]}
+{"text": "I would enjoy goal keeping.", "labels": ["Goals or Plans"]}
+{"text": "I sing along to music while doing chores.", "labels": ["Routines or Habits"]}
+{"text": "My favorite song is Jenny by Nothing More.", "labels": ["Characteristics"]}
+{"text": "I like watching sports on television.", "labels": ["Routines or Habits"]}
+{"text": "My granddaughter wants to be a cosmetologist.", "labels": ["Goals or Plans", "Relationship"]}
+{"text": "I surf.", "labels": ["Routines or Habits"]}
+{"text": "We like to hike.", "labels": ["Routines or Habits"]}
+{"text": "I would love to own more horses.", "labels": ["Goals or Plans"]}
+{"text": "I currently living in the city.", "labels": ["Experiences"]}
+{"text": "I move out soon.", "labels": ["Goals or Plans"]}
+{"text": "I would like to try baseball.", "labels": ["Goals or Plans"]}
+{"text": "I am done with high school.", "labels": ["Experiences"]}
+{"text": "I have multiple social media accounts.", "labels": ["Experiences"]}
+{"text": "I work out.", "labels": ["Routines or Habits"]}
+{"text": "my favourite thing to cook is potato pancakes.", "labels": ["Routines or Habits"]}
+{"text": "I worked for airlines.", "labels": ["Experiences"]}
+{"text": "I want to enter a robot exhibition.", "labels": ["Goals or Plans"]}
+{"text": "I like Parks and Recreation.", "labels": ["Characteristics"]}
+{"text": "I am doing well in my classes at school.", "labels": ["Experiences"]}
+{"text": "He loves gardening.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I hope to travel this summer.", "labels": ["Goals or Plans"]}
+{"text": "I enjoy Johnny Cash.", "labels": ["Characteristics"]}
+{"text": "I have a family, a dog, and a job.", "labels": ["Experiences"]}
+{"text": "I like to draw.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I'm looking for a job.", "labels": ["Goals or Plans"]}
+{"text": "I have a bad reputation.", "labels": ["Experiences"]}
+{"text": "My wife is studying to be a nurse.", "labels": ["Experiences", "Relationship"]}
+{"text": "I like South Carolina food.", "labels": ["Characteristics"]}
+{"text": "I can not go camping this weekend.", "labels": ["Goals or Plans"]}
+{"text": "I ride horses at least once a week.", "labels": ["Routines or Habits"]}
+{"text": "I have 10 boys and around 17 girls.", "labels": ["Experiences"]}
+{"text": "I do a lot of self-care to cope with my work.", "labels": ["Characteristics"]}
+{"text": "I enjoy eating pineapple in parfaits with granola and whipped cream.", "labels": ["Characteristics"]}
+{"text": "I'm not much of a gambler.", "labels": ["Characteristics"]}
+{"text": "I love the outdoors.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I haven't been to a concert in a long time.", "labels": ["Experiences"]}
+{"text": "I took a break from working as an air stewardess when I was younger because of the customers.", "labels": ["Experiences"]}
+{"text": "I have a pet raccoon named Journey.", "labels": ["Experiences"]}
+{"text": "My father died when I was in high school.", "labels": ["Experiences"]}
+{"text": "I have a camera in my yard.", "labels": ["Experiences"]}
+{"text": "My cows have names.", "labels": ["Experiences"]}
+{"text": "I don't have a job right now.", "labels": ["Experiences"]}
+{"text": "I enjoy drink different kinds of beers.", "labels": ["Characteristics"]}
+{"text": "I would prefer a dream job in dream field.", "labels": ["Goals or Plans"]}
+{"text": "I live in a city 70 miles away from NYC.", "labels": ["Experiences"]}
+{"text": "I think if teaching doesn't work out, I will consider research.", "labels": ["Goals or Plans"]}
+{"text": "My family is on the east coast.", "labels": ["Experiences", "Relationship"]}
+{"text": "I do freelance work.", "labels": ["Routines or Habits"]}
+{"text": "My guilty pleasure for a pump up is Get Ready 4 This.", "labels": ["Characteristics"]}
+{"text": "I know Nickelback's music.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I own a cabin cruiser.", "labels": ["Experiences"]}
+{"text": "I live in Atlanta.", "labels": ["Experiences"]}
+{"text": "I live in New York.", "labels": ["Experiences"]}
+{"text": "I am not allowed to have pets at college.", "labels": ["Experiences"]}
+{"text": "I was in the room to give support.", "labels": ["Experiences"]}
+{"text": "I am a knitter.", "labels": ["Routines or Habits"]}
+{"text": "I take nutritional supplements.", "labels": ["Experiences"]}
+{"text": "I sew.", "labels": ["Routines or Habits"]}
+{"text": "I have never had children.", "labels": ["Experiences"]}
+{"text": "I manage rental properties.", "labels": ["Experiences"]}
+{"text": "I have three pet Chihuahuas.", "labels": ["Experiences"]}
+{"text": "I'm in my early 40s.", "labels": ["Characteristics"]}
+{"text": "I am an art major.", "labels": ["Experiences"]}
+{"text": "I live in NY.", "labels": ["Experiences"]}
+{"text": "My goal is to hike the Appalachian Trail.", "labels": ["Goals or Plans"]}
+{"text": "I recently took up snowboarding.", "labels": ["Experiences"]}
+{"text": "I work out at home with my friends through Zoom.", "labels": ["Routines or Habits"]}
+{"text": "I am in Hawaii.", "labels": ["Experiences"]}
+{"text": "I am going on a Mediterranean cruise.", "labels": ["Goals or Plans"]}
+{"text": "I have a son that loves that game as well.", "labels": ["Characteristics", "Experiences", "Relationship"]}
+{"text": "I just hired a guy.", "labels": ["Experiences"]}
+{"text": "I will introduce the other speaker to my clients.", "labels": ["Goals or Plans"]}
+{"text": "I like singing.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I am studying different kinds of art at college.", "labels": ["Experiences"]}
+{"text": "I have just started playing the piano.", "labels": ["Experiences"]}
+{"text": "I like Ice Cream.", "labels": ["Characteristics"]}
+{"text": "I enjoy making cupcakes.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I like classical jazz.", "labels": ["Characteristics"]}
+{"text": "I like whiskey.", "labels": ["Characteristics"]}
+{"text": "I play racketball.", "labels": ["Routines or Habits"]}
+{"text": "I recently moved away from rural Mississippi.", "labels": ["Experiences"]}
+{"text": "I didn't work on any model airplanes.", "labels": ["Experiences"]}
+{"text": "I can't whistle.", "labels": ["Characteristics"]}
+{"text": "I want to surf.", "labels": ["Goals or Plans"]}
+{"text": "I like being around kids.", "labels": ["Characteristics"]}
+{"text": "I've been working the same job for a while now.", "labels": ["Experiences"]}
+{"text": "I haven't taken any days off lately.", "labels": ["Experiences"]}
+{"text": "I am enjoying Katy Perry music.", "labels": ["Characteristics"]}
+{"text": "I have a Honda civic.", "labels": ["Experiences"]}
+{"text": "I started making beer as a hobby.", "labels": ["Experiences"]}
+{"text": "I'm waiting for a call back.", "labels": ["Goals or Plans"]}
+{"text": "I try to visit my parents as often as I can.", "labels": ["Routines or Habits"]}
+{"text": "I only work in the daytime.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I work with doctors.", "labels": ["Experiences"]}
+{"text": "I have been married for 5 years but have lived with my husband for 8 years", "labels": ["Experiences"]}
+{"text": "I like the prophets.", "labels": ["Characteristics"]}
+{"text": "I used to have a fish.", "labels": ["Experiences"]}
+{"text": "I have not gone on a hunting trip before.", "labels": ["Experiences"]}
+{"text": "I just want to have fun.", "labels": ["Goals or Plans"]}
+{"text": "i just had a birthday and a party with friends.", "labels": ["Experiences"]}
+{"text": "I live somewhere that alligators are common.", "labels": ["Experiences"]}
+{"text": "I have dogs. One of my dogs was just fixed.", "labels": ["Experiences"]}
+{"text": "I like upbeat music you can sing to.", "labels": ["Characteristics"]}
+{"text": "I am part of my local bridge club.", "labels": ["Experiences"]}
+{"text": "I would like to have a lake house.", "labels": ["Goals or Plans"]}
+{"text": "I think that caring for people is the most important part of being a nurse.", "labels": ["Characteristics"]}
+{"text": "I hope to be a grand parent one day.", "labels": ["Goals or Plans"]}
+{"text": "We are going on a date.", "labels": ["Goals or Plans"]}
+{"text": "My youngest grandchild is going to dye my hair.", "labels": ["Goals or Plans", "Relationship"]}
+{"text": "I prefer cool weather in the Autumn.", "labels": ["Characteristics"]}
+{"text": "Shopping inspires me.", "labels": ["Characteristics"]}
+{"text": "I am a writer.", "labels": ["Characteristics", "Experiences", "Routines or Habits"]}
+{"text": "I think you should consider adopting a cat.", "labels": ["Characteristics"]}
+{"text": "I learned how to survive from my parents.", "labels": ["Experiences"]}
+{"text": "I will graduate college in a year.", "labels": ["Goals or Plans"]}
+{"text": "I have a raccoon problem.", "labels": ["Experiences"]}
+{"text": "I listen to Keith Urban and Tim McGraw.", "labels": ["Routines or Habits"]}
+{"text": "I'm happy when someone eats something from my bakery.", "labels": ["Characteristics"]}
+{"text": "I'm loving my new laptop.", "labels": ["Characteristics"]}
+{"text": "I own multiple mustangs.", "labels": ["Experiences"]}
+{"text": "I am still a superman fan.", "labels": ["Characteristics"]}
+{"text": "I'm studying and concerned about my grades.", "labels": ["Experiences"]}
+{"text": "I had a difficult experience dropping out of college to travel.", "labels": ["Experiences"]}
+{"text": "I drive a Toyota Corolla in the city.", "labels": ["Experiences", "Routines or Habits"]}
+{"text": "I look up to Speaker 2.", "labels": ["None"]}
+{"text": "I have a lot of knowledge about movies.", "labels": ["Experiences"]}
+{"text": "I am searching for a job.", "labels": ["Goals or Plans"]}
+{"text": "I am applying for an athletic trainer job at a local gym.", "labels": ["Goals or Plans"]}
+{"text": "Used to love riding bikes when younger.", "labels": ["Experiences"]}
+{"text": "My poodle is friendly, strong, and light brown", "labels": ["Relationship"]}
+{"text": "I had kids.", "labels": ["Experiences"]}
+{"text": "I like hockey.", "labels": ["Characteristics"]}
+{"text": "I don't know anyone famous.", "labels": ["Experiences"]}
+{"text": "I'm going to travel alone.", "labels": ["Goals or Plans"]}
+{"text": "I like the Rolling Stones.", "labels": ["Characteristics"]}
+{"text": "I am in school and love robotics in past and present.", "labels": ["Experiences"]}
+{"text": "I work at a diner.", "labels": ["Experiences"]}
+{"text": "Me and my spouse are looking for home insurance and a new home.", "labels": ["Goals or Plans"]}
+{"text": "I live in Louisiana.", "labels": ["Experiences"]}
+{"text": "I am in law school.", "labels": ["Experiences"]}
+{"text": "I enjoy eating.", "labels": ["Characteristics"]}
+{"text": "I have been white river rafting, mountaineering, and been on scary rides.", "labels": ["Experiences"]}
+{"text": "I like renovating and working on my house, which is unfinished.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I think Tetris is boring after a while.", "labels": ["Characteristics"]}
+{"text": "I use twitter.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I'm going to start watching Queer Eye.", "labels": ["Goals or Plans"]}
+{"text": "I want to be a nurse.", "labels": ["Goals or Plans"]}
+{"text": "I enjoy running.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I have been hiking recently.", "labels": ["Experiences"]}
+{"text": "I have a 5 year old who thinks the robot is his baby brother.", "labels": ["Experiences"]}
+{"text": "I have not bought furniture in a long time.", "labels": ["Experiences"]}
+{"text": "I've been hiking for a few years.", "labels": ["Experiences"]}
+{"text": "I want to learn how to train my dog.", "labels": ["Goals or Plans"]}
+{"text": "I can do graphic design work.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I can't make a decision on what car I want to buy.", "labels": ["Goals or Plans"]}
+{"text": "I played football in college.", "labels": ["Experiences"]}
+{"text": "I would like to see the historical sites in Italy.", "labels": ["Goals or Plans"]}
+{"text": "I am writing a book about a black cat.", "labels": ["Goals or Plans"]}
+{"text": "I like watercolor pallets the best.", "labels": ["Characteristics"]}
+{"text": "I work at a local mall store.", "labels": ["Experiences"]}
+{"text": "I like to eat the skin of the green apples.", "labels": ["Characteristics"]}
+{"text": "I am a material person.", "labels": ["Characteristics"]}
+{"text": "I recently tried a new running route.", "labels": ["Experiences"]}
+{"text": "I live watching YouTube.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I am a nirvana fan.", "labels": ["Characteristics"]}
+{"text": "I like mystical creatures.", "labels": ["Characteristics"]}
+{"text": "I'm on a reality tv show.", "labels": ["Experiences"]}
+{"text": "My work is not difficult, but does take some practice.", "labels": ["None"]}
+{"text": "I have never planned a fundraiser before.", "labels": ["Experiences"]}
+{"text": "I believe having pets would interrupt my work.", "labels": ["Characteristics"]}
+{"text": "I don't have time for a vacation.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I use coupons at McDonald's.", "labels": ["Routines or Habits"]}
+{"text": "I am concerned about the less fortunate.", "labels": ["Characteristics"]}
+{"text": "My cat's name is Venus.", "labels": ["Experiences"]}
+{"text": "Now, I work at Nissan selling cars.", "labels": ["Experiences"]}
+{"text": "I would love to see your artwork.", "labels": ["Goals or Plans"]}
+{"text": "My girlfriend got into Stanford.", "labels": ["Experiences", "Relationship"]}
+{"text": "The only shoes I wear are tennis shoes.", "labels": ["Routines or Habits"]}
+{"text": "I live outside Boston.", "labels": ["Experiences"]}
+{"text": "I work as a customer service representative.", "labels": ["Experiences"]}
+{"text": "My car is a 1980 Bentley Corniche.", "labels": ["Experiences"]}
+{"text": "My friend moved away.", "labels": ["Experiences", "Relationship"]}
+{"text": "I work as a naval officer.", "labels": ["Experiences"]}
+{"text": "I cook on an open fire outdoors.", "labels": ["Routines or Habits"]}
+{"text": "My name is Tammi.", "labels": ["Characteristics"]}
+{"text": "I live near Silly Sonka's.", "labels": ["Experiences"]}
+{"text": "I like the park near my neighborhood.", "labels": ["Characteristics"]}
+{"text": "attending classes as well as playing football.", "labels": ["None"]}
+{"text": "I can use for Uber to get some extra cash on the side.", "labels": ["Experiences"]}
+{"text": "I live away from my family.", "labels": ["Experiences"]}
+{"text": "I work part time.", "labels": ["Experiences"]}
+{"text": "Sometimes I eat the meat of the deer I hunt.", "labels": ["Routines or Habits"]}
+{"text": "I work as a delivery driver.", "labels": ["Experiences"]}
+{"text": "I don't hike much now I am old.", "labels": ["Characteristics"]}
+{"text": "My kids have a lot of accidents.", "labels": ["Relationship"]}
+{"text": "We have had Leto for 4 years.", "labels": ["Experiences"]}
+{"text": "I have been sprayed by a skunk when I was younger.", "labels": ["Experiences"]}
+{"text": "I have thought about learning to play the guitar but have no committed to lessons.", "labels": ["Goals or Plans"]}
+{"text": "My son was injured by a shark.", "labels": ["Experiences", "Relationship"]}
+{"text": "I enjoy things of an artistic nature.", "labels": ["Characteristics"]}
+{"text": "I think the name \"mittens\" is cliche for a cat.", "labels": ["Characteristics"]}
+{"text": "I am prepping for my next race.", "labels": ["Goals or Plans"]}
+{"text": "I am lazy.", "labels": ["Characteristics"]}
+{"text": "My brother travels internationally with his band.", "labels": ["Experiences", "Relationship"]}
+{"text": "My name is Luciano.", "labels": ["Characteristics"]}
+{"text": "I sing in a choir.", "labels": ["Routines or Habits"]}
+{"text": "I think I would be a good barber.", "labels": ["Characteristics"]}
+{"text": "I live in a quiet area that doesn't get a lot of tourism.", "labels": ["Experiences"]}
+{"text": "I like the Moonlight Sonata.", "labels": ["Characteristics"]}
+{"text": "I am shy.", "labels": ["Characteristics"]}
+{"text": "Staying with parents to save up.", "labels": ["Experiences"]}
+{"text": "I spoke to my dad recently.", "labels": ["Experiences"]}
+{"text": "I get a discount on cat food.", "labels": ["Experiences"]}
+{"text": "I am bald.", "labels": ["Characteristics"]}
+{"text": "I go for runs.", "labels": ["Routines or Habits"]}
+{"text": "i have a cat and it loves shrimp cat food.", "labels": ["Experiences"]}
+{"text": "I was a fiction author.", "labels": ["Experiences"]}
+{"text": "I had a different vehicle mention.", "labels": ["Experiences"]}
+{"text": "I want to change my hair color.", "labels": ["Goals or Plans"]}
+{"text": "I just moved.", "labels": ["Experiences"]}
+{"text": "I work for a context not given but unrelated to this (wine knowledge perhaps incidental).", "labels": ["None"]}
+{"text": "I love pistachio macarons.", "labels": ["Characteristics"]}
+{"text": "I'm willing to teach tennis.", "labels": ["Goals or Plans"]}
+{"text": "I work in a grocery store.", "labels": ["Experiences"]}
+{"text": "I don't work nights.", "labels": ["Characteristics"]}
+{"text": "I live in Ohio.", "labels": ["Experiences"]}
+{"text": "I would like to learn to play an instrument.", "labels": ["Goals or Plans"]}
+{"text": "I like caramel milkshakes.", "labels": ["Characteristics"]}
+{"text": "I used to work as a construction model, building small models and taking them to architects.", "labels": ["Experiences"]}
+{"text": "I am female.", "labels": ["Characteristics"]}
+{"text": "I watch hockey almost every night.", "labels": ["Routines or Habits"]}
+{"text": "My daughters and I have a playful relationship.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I play guitar in the local band.", "labels": ["Experiences", "Routines or Habits"]}
+{"text": "I usually go in the morning during the weekend.", "labels": ["Routines or Habits"]}
+{"text": "I have a mini van.", "labels": ["Experiences"]}
+{"text": "I just moved into an apartment.", "labels": ["Experiences"]}
+{"text": "I'm studying to be a doctor.", "labels": ["Experiences", "Goals or Plans"]}
+{"text": "I have a large mixed brindle colored dog named Sox.", "labels": ["Experiences"]}
+{"text": "I recently moved to San Francisco.", "labels": ["Experiences"]}
+{"text": "I like to watch baseball.", "labels": ["Routines or Habits"]}
+{"text": "I have been to London.", "labels": ["Experiences"]}
+{"text": "I like rap.", "labels": ["Characteristics"]}
+{"text": "I got to see the zebras.", "labels": ["Experiences"]}
+{"text": "I find Nikes expensive compared to adidas and pumas.", "labels": ["Characteristics"]}
+{"text": "I have to get my horse trailer serviced.", "labels": ["Goals or Plans"]}
+{"text": "I have a red iPhone.", "labels": ["Experiences"]}
+{"text": "I am helpful.", "labels": ["Characteristics"]}
+{"text": "I learned these skills in the military.", "labels": ["Experiences"]}
+{"text": "I am religious -- possibly Catholic.", "labels": ["Characteristics"]}
+{"text": "I am a vegetarian, but I eat sushi.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I am not a good bowler.", "labels": ["Characteristics"]}
+{"text": "I think that people's rights should be protected.", "labels": ["Characteristics"]}
+{"text": "I don't like video games.", "labels": ["Characteristics"]}
+{"text": "I don't know how to play soccer.", "labels": ["Characteristics"]}
+{"text": "I have painted the Grand Canyon.", "labels": ["Experiences"]}
+{"text": "I like movies more than sunsets.", "labels": ["Characteristics"]}
+{"text": "I work at a restaurant.", "labels": ["Experiences"]}
+{"text": "Chips with only three legs.", "labels": ["None"]}
+{"text": "I babysit for the neighbor.", "labels": ["Routines or Habits"]}
+{"text": "I watch TV with my nephew.", "labels": ["Routines or Habits"]}
+{"text": "My father-in-law passed away.", "labels": ["Experiences", "Relationship"]}
+{"text": "I usually listen to old rock.", "labels": ["Routines or Habits"]}
+{"text": "I am going to the park.", "labels": ["Goals or Plans"]}
+{"text": "I like Marvel and sometimes DC super hero movies.", "labels": ["Characteristics"]}
+{"text": "I don't like walking through the woods; I think it's creepy.", "labels": ["Characteristics"]}
+{"text": "I would also like to see a live show.", "labels": ["Goals or Plans"]}
+{"text": "I enjoyed watching the original Star Wars Trilogy.", "labels": ["Experiences"]}
+{"text": "I haven't been to new york.", "labels": ["Experiences"]}
+{"text": "I have a radio show that won an award.", "labels": ["Experiences"]}
+{"text": "I am allergic to cats.", "labels": ["Characteristics"]}
+{"text": "I love people.", "labels": ["Characteristics"]}
+{"text": "I like listening to Gregorian Chant.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I also work.", "labels": ["Experiences"]}
+{"text": "My husband does the planting and harvesting.", "labels": ["Relationship"]}
+{"text": "dreams of opening a pet cafe", "labels": ["Goals or Plans"]}
+{"text": "I like stories about vampires.", "labels": ["Characteristics"]}
+{"text": "I hunt deer and give the bodies to a museum for display.", "labels": ["Experiences", "Routines or Habits"]}
+{"text": "I think my cat is cute.", "labels": ["Characteristics"]}
+{"text": "I eat much when I am bored.", "labels": ["Routines or Habits"]}
+{"text": "My dream is to open my own teaching program for horse racing.", "labels": ["Goals or Plans"]}
+{"text": "I have a basketball tournament this month.", "labels": ["Goals or Plans"]}
+{"text": "I do scientific experiments.", "labels": ["Experiences"]}
+{"text": "I live a frugal lifestyle.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I play tennis and I train and practice for it every day", "labels": ["Routines or Habits"]}
+{"text": "I am regularly busy.", "labels": ["Experiences"]}
+{"text": "I worry about fuel efficiency.", "labels": ["Characteristics"]}
+{"text": "My dogs are Pitt bulls.", "labels": ["Experiences"]}
+{"text": "I don't like to train my parrot.", "labels": ["Characteristics"]}
+{"text": "I like to read.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I like to collect shells.", "labels": ["Routines or Habits"]}
+{"text": "We are friends.", "labels": ["Experiences"]}
+{"text": "My dog likes to snuggle.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I have never used a pressure cooker.", "labels": ["Experiences"]}
+{"text": "I don't want kids.", "labels": ["Characteristics"]}
+{"text": "I like eating fish but not chips.", "labels": ["Characteristics"]}
+{"text": "I have additional friends.", "labels": ["Experiences"]}
+{"text": "I'm planning a solo trip to Michigan in the winter.", "labels": ["Goals or Plans"]}
+{"text": "I live near the hills.", "labels": ["Experiences"]}
+{"text": "I work for jnj.", "labels": ["Experiences"]}
+{"text": "Sometimes I disagree with my team members.", "labels": ["Characteristics"]}
+{"text": "I find aquariums relaxing.", "labels": ["Characteristics"]}
+{"text": "I work with my father.", "labels": ["Experiences"]}
+{"text": "I have a job at Mod Pizza.", "labels": ["Experiences"]}
+{"text": "Injured animals will  make me sad.", "labels": ["Characteristics"]}
+{"text": "I have a surgeon for a husband.", "labels": ["Experiences", "Relationship"]}
+{"text": "My dad drives trucks.", "labels": ["Experiences", "Relationship"]}
+{"text": "I wasn't an alcoholic then, although I did drink socially.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I have two children.", "labels": ["Experiences"]}
+{"text": "I am nervous about getting the part I want in my manuscript.", "labels": ["Characteristics"]}
+{"text": "I have been canoeing.", "labels": ["Experiences"]}
+{"text": "I am familiar with training dogs.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I spend time at sea.", "labels": ["Routines or Habits"]}
+{"text": "I like my coworkers.", "labels": ["Characteristics"]}
+{"text": "I like Callaway Gardens.", "labels": ["Characteristics"]}
+{"text": "I teach Japanese and drawing.", "labels": ["Experiences", "Routines or Habits"]}
+{"text": "My mother is from Saudi Arabia and she lives with me.", "labels": ["Experiences", "Relationship"]}
+{"text": "I'm not a big fan of science fiction.", "labels": ["Characteristics"]}
+{"text": "I have chickens, pigs, cows and a black lab.", "labels": ["Experiences"]}
+{"text": "I don't visit my parents very often.", "labels": ["Characteristics"]}
+{"text": "I recently got new boots.", "labels": ["Experiences"]}
+{"text": "I am excited to.", "labels": ["Characteristics"]}
+{"text": "I grow cherries.", "labels": ["Routines or Habits"]}
+{"text": "I have a used i-Phone 7.", "labels": ["Experiences"]}
+{"text": "I babysit children.", "labels": ["Experiences", "Routines or Habits"]}
+{"text": "I play basketball.", "labels": ["Routines or Habits"]}
+{"text": "I am not starting my own business yet.", "labels": ["Goals or Plans"]}
+{"text": "I like historical biographies and self-help books.", "labels": ["Characteristics"]}
+{"text": "My favorite TV show is Tom and Jerry.", "labels": ["Characteristics"]}
+{"text": "I am impatient.", "labels": ["Characteristics"]}
+{"text": "I struggle to pay my bills.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I make crowds go wild.", "labels": ["Routines or Habits"]}
+{"text": "I work managing a lawyers office.", "labels": ["Experiences"]}
+{"text": "I worked in metal work factories.", "labels": ["Experiences"]}
+{"text": "My son likes playing with other kids.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I like dogs.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I have free time due to my busy husband.", "labels": ["Experiences"]}
+{"text": "I miss home.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I like movies.", "labels": ["Characteristics"]}
+{"text": "I have removed myself from the situation.", "labels": ["Experiences"]}
+{"text": "I love to fish.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I have bluish green eyes.", "labels": ["Characteristics"]}
+{"text": "I talk to my mom.", "labels": ["Routines or Habits"]}
+{"text": "I watch American football and my favorite team is the Steelers.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I like singing show tunes.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I genetically engineered the tomatoes we grow on my farm.", "labels": ["Experiences"]}
+{"text": "I do not work at a restaurant.", "labels": ["Experiences"]}
+{"text": "I think I look good.", "labels": ["Characteristics"]}
+{"text": "I am terrible at rollerblading.", "labels": ["Characteristics"]}
+{"text": "My favorite musical is Hamilton.", "labels": ["Characteristics"]}
+{"text": "My favourite football team is the Philadelphia Eagles.", "labels": ["Characteristics"]}
+{"text": "I have a snake.", "labels": ["Experiences"]}
+{"text": "I majored in math.", "labels": ["Experiences"]}
+{"text": "I have 2 clown fish.", "labels": ["Experiences"]}
+{"text": "I was on a cruise once and the stabilizers went out.", "labels": ["Experiences"]}
+{"text": "I like to help people.", "labels": ["Characteristics"]}
+{"text": "I like to sit by the fire with a good book.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I like my new car.", "labels": ["Characteristics"]}
+{"text": "My dad is a cop.", "labels": ["Experiences", "Relationship"]}
+{"text": "I live alone now.", "labels": ["Experiences"]}
+{"text": "I was married before.", "labels": ["Experiences"]}
+{"text": "I like to draw characters.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I am a music producer and a engineer.", "labels": ["Experiences"]}
+{"text": "My kids love the beach.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I like cappuccinos.", "labels": ["Characteristics"]}
+{"text": "I don't like working with cars.", "labels": ["Characteristics"]}
+{"text": "I am not very creative.", "labels": ["Characteristics"]}
+{"text": "I like to watch romance genre shows.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I recently lost my job.", "labels": ["Experiences"]}
+{"text": "I have never been tubing before.", "labels": ["Experiences"]}
+{"text": "I can't take long flights because of my back.", "labels": ["Characteristics"]}
+{"text": "I do not like having a bad reputation.", "labels": ["Characteristics"]}
+{"text": "I am going to school.", "labels": ["Goals or Plans"]}
+{"text": "I train for around 90 minutes.", "labels": ["Routines or Habits"]}
+{"text": "I enjoy eating takeout food.", "labels": ["Characteristics"]}
+{"text": "I have never met the band The Red Hot Chili Peppers, but I would like to one day.", "labels": ["Experiences", "Goals or Plans"]}
+{"text": "I am going to ask my school counselor about studying abroad.", "labels": ["Goals or Plans"]}
+{"text": "I find art relaxes me.", "labels": ["Characteristics"]}
+{"text": "I have a wife who is afraid of the robot.", "labels": ["Experiences"]}
+{"text": "I like painting and composing music.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I love Beethoven.", "labels": ["Characteristics"]}
+{"text": "I will graduate from college in 2019.", "labels": ["Goals or Plans"]}
+{"text": "I would like to go to Ireland.", "labels": ["Goals or Plans"]}
+{"text": "I have a guitar.", "labels": ["Experiences"]}
+{"text": "I am in circus business.", "labels": ["Experiences"]}
+{"text": "Alfred Hitchcock is my favorite old movie director.", "labels": ["Characteristics"]}
+{"text": "I want to go to a tropical paradise.", "labels": ["Goals or Plans"]}
+{"text": "I want to make new friends.", "labels": ["Goals or Plans"]}
+{"text": "My dog is a Catahoula Leopard.", "labels": ["Relationship"]}
+{"text": "My daughters like to paint.", "labels": ["Relationship", "Routines or Habits"]}
+{"text": "I like the Dodgers.", "labels": ["Characteristics"]}
+{"text": "I would like to watch a horse race.", "labels": ["Goals or Plans"]}
+{"text": "I am not good at bowling.", "labels": ["Characteristics"]}
+{"text": "I work at a fast food restaurant.", "labels": ["Experiences"]}
+{"text": "I would love to move to the places closer to the water.", "labels": ["Goals or Plans"]}
+{"text": "I am a women who wears size 12 in shoes.", "labels": ["Characteristics"]}
+{"text": "I live with my parents at home.", "labels": ["Experiences"]}
+{"text": "It is powerful and dangerous.", "labels": ["None"]}
+{"text": "I learned to draw from my mother.", "labels": ["Experiences"]}
+{"text": "I dropped out of school.", "labels": ["Experiences"]}
+{"text": "I like the colour yellow.", "labels": ["Characteristics"]}
+{"text": "i am scared of snakes.", "labels": ["Characteristics"]}
+{"text": "knife", "labels": ["None"]}
+{"text": "My favorite candy is Cherry Drops.", "labels": ["Characteristics"]}
+{"text": "I would love to buy a nice guitar to showcase in my room.", "labels": ["Goals or Plans"]}
+{"text": "I broke my ankle 4 days ago.", "labels": ["Experiences"]}
+{"text": "I work hard in school.", "labels": ["Characteristics"]}
+{"text": "I know some Japanese but I am not fluent.", "labels": ["Experiences"]}
+{"text": "I do not have a partner.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I love to try new recipes.", "labels": ["Characteristics"]}
+{"text": "I am concerned about the well-being of the environment and climate.", "labels": ["Characteristics"]}
+{"text": "I don't usually sell my paintings.", "labels": ["Characteristics"]}
+{"text": "I garden for about an hour each day.", "labels": ["Routines or Habits"]}
+{"text": "I have a dog named Hank.", "labels": ["Experiences"]}
+{"text": "I was born in 2002.", "labels": ["Characteristics"]}
+{"text": "I take pictures of my dogs.", "labels": ["Routines or Habits"]}
+{"text": "My daughters do not like singing.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I have listened to Toby Keith before", "labels": ["Experiences"]}
+{"text": "I think pugs are adorable.", "labels": ["Characteristics"]}
+{"text": "I've always wanted to visit Italy.", "labels": ["Goals or Plans"]}
+{"text": "I create advertising videos.", "labels": ["Routines or Habits"]}
+{"text": "I am considering working the job full-time.", "labels": ["Goals or Plans"]}
+{"text": "I work at school.", "labels": ["Experiences"]}
+{"text": "I have a bearded dragon named Sid.", "labels": ["Experiences"]}
+{"text": "I lived in Japan for ten years.", "labels": ["Experiences"]}
+{"text": "I don't care to have a relationship right now.", "labels": ["Characteristics"]}
+{"text": "I am Jasmine.", "labels": ["Characteristics"]}
+{"text": "I like meat.", "labels": ["Characteristics"]}
+{"text": "I have a home with a den.", "labels": ["Experiences"]}
+{"text": "I eat healthy food.", "labels": ["Routines or Habits"]}
+{"text": "My favorite food is Thai food.", "labels": ["Characteristics"]}
+{"text": "hard-core gamer", "labels": ["Characteristics"]}
+{"text": "I listen to music while doing tasks at work.", "labels": ["Routines or Habits"]}
+{"text": "We eat pasta often.", "labels": ["Routines or Habits"]}
+{"text": "I do not like lawyers.", "labels": ["Characteristics"]}
+{"text": "We have a small online presence with my candy business.", "labels": ["Experiences"]}
+{"text": "I have two dogs named Superman and Kevin.", "labels": ["Experiences"]}
+{"text": "I am social.", "labels": ["Characteristics"]}
+{"text": "I have Friday's off.", "labels": ["Experiences"]}
+{"text": "I can't run but I can swim.", "labels": ["Characteristics"]}
+{"text": "I am working on a masters degree.", "labels": ["Experiences"]}
+{"text": "I can eat pizza.", "labels": ["Characteristics"]}
+{"text": "I focus on the root cause of an issue.", "labels": ["Characteristics"]}
+{"text": "I am moving.", "labels": ["None"]}
+{"text": "I like walking at sunset.", "labels": ["Routines or Habits"]}
+{"text": "I have a pug named corky.", "labels": ["Experiences"]}
+{"text": "I ate a bagel today.", "labels": ["Experiences"]}
+{"text": "I'd rather relax than work.", "labels": ["Characteristics"]}
+{"text": "I am vegetarian as well in real life and in minecraft.", "labels": ["Characteristics"]}
+{"text": "I love going to the ocean.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I live in a small town.", "labels": ["Experiences"]}
+{"text": "I have children.", "labels": ["Experiences"]}
+{"text": "I have a mom who is a great baker.", "labels": ["Experiences", "Relationship"]}
+{"text": "I have  a nephew.", "labels": ["Experiences"]}
+{"text": "I would love to learn to play a musical instrument.", "labels": ["Goals or Plans"]}
+{"text": "I have living parents.", "labels": ["Experiences"]}
+{"text": "My father is wealthy.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I have 1 to 2 foot long snakes back home.", "labels": ["Experiences"]}
+{"text": "I love the Tigers baseball team.", "labels": ["Characteristics"]}
+{"text": "I helped design some of the skyscrapers and apartments in Milwaukee.", "labels": ["Experiences"]}
+{"text": "I like biology and animals.", "labels": ["Characteristics"]}
+{"text": "I have read harry potter and game of thrones.", "labels": ["Experiences"]}
+{"text": "I managed to find a programmer for the game.", "labels": ["Experiences"]}
+{"text": "I want to work in the desert.", "labels": ["Goals or Plans"]}
+{"text": "I like to party.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I fell down when my foot got caught in a hole.", "labels": ["Experiences"]}
+{"text": "I see other people using social media.", "labels": ["Experiences"]}
+{"text": "I work as a security guard.", "labels": ["Experiences"]}
+{"text": "I like to fix old cars.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I'm a hockey fan.", "labels": ["Characteristics"]}
+{"text": "I have an older sister.", "labels": ["Experiences"]}
+{"text": "I want to learn how to play an instrument.", "labels": ["Goals or Plans"]}
+{"text": "My teeth need fixing.", "labels": ["Goals or Plans"]}
+{"text": "I plan on going to the west coast of Florida.", "labels": ["Goals or Plans"]}
+{"text": "My landlord is ok with any pets in.", "labels": ["Experiences", "Relationship"]}
+{"text": "I am very disciplined.", "labels": ["Characteristics"]}
+{"text": "I am not looking to run anytime soon.", "labels": ["Experiences"]}
+{"text": "I'm married and no longer young.", "labels": ["Experiences"]}
+{"text": "I am excited about becoming a pet owner.", "labels": ["Goals or Plans"]}
+{"text": "I don't watch snowpiercer.", "labels": ["Characteristics"]}
+{"text": "I have a brother.", "labels": ["Experiences"]}
+{"text": "I have been clubbing in Miami.", "labels": ["Experiences"]}
+{"text": "I am married with 2 kids.", "labels": ["Experiences"]}
+{"text": "I drove to Michigan 2 weeks ago.", "labels": ["Experiences"]}
+{"text": "I hate seafood.", "labels": ["Characteristics"]}
+{"text": "I am married with two children.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I like mac and cheese.", "labels": ["Characteristics"]}
+{"text": "I would like to get married.", "labels": ["Goals or Plans"]}
+{"text": "My favorite recipe is pumpkin pie.", "labels": ["Characteristics"]}
+{"text": "I am on unemployment.", "labels": ["Experiences"]}
+{"text": "I don't know what I want to do in life.", "labels": ["Characteristics"]}
+{"text": "I love adidas or pumas running shoes.", "labels": ["Characteristics"]}
+{"text": "I went for a two mile run earlier.", "labels": ["Experiences"]}
+{"text": "I have a farm.", "labels": ["Experiences"]}
+{"text": "I'm preparing for a marathon in two months.", "labels": ["Goals or Plans"]}
+{"text": "I have never read Moby Dick.", "labels": ["Experiences"]}
+{"text": "I live in Seattle.", "labels": ["Experiences"]}
+{"text": "I like reading the tale of genji.", "labels": ["Characteristics"]}
+{"text": "I don't like to travel.", "labels": ["Characteristics"]}
+{"text": "I recently joined the army.", "labels": ["Experiences"]}
+{"text": "My new job is in photography.", "labels": ["Experiences"]}
+{"text": "I do not play basketball.", "labels": ["Characteristics"]}
+{"text": "I have not been to Israel.", "labels": ["Experiences"]}
+{"text": "I like meeting up with my friends at a hot spring.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "I'm struggling to write my eBook.", "labels": ["Characteristics", "Goals or Plans"]}
+{"text": "I have only travelled to Mexico outside of my country.", "labels": ["Experiences"]}
+{"text": "I would like to visit Toronto.", "labels": ["Goals or Plans"]}
+{"text": "I go to college during the day.", "labels": ["Experiences", "Routines or Habits"]}
+{"text": "I used to take long walks to recharge during my pregnancy and found it great.", "labels": ["Experiences"]}
+{"text": "I used to ride a scooter.", "labels": ["Experiences"]}
+{"text": "has a full-time job at an IT firm", "labels": ["None"]}
+{"text": "I am not happy with my job anymore.", "labels": ["Characteristics"]}
+{"text": "I won a sparring competition.", "labels": ["Experiences"]}
+{"text": "I work as a counselor.", "labels": ["Experiences"]}
+{"text": "My favorite holiday is christmas.", "labels": ["Characteristics"]}
+{"text": "I enjoy computer programming.", "labels": ["Characteristics"]}
+{"text": "I hope to go to Europe again this summer.", "labels": ["Goals or Plans"]}
+{"text": "I enjoy fast food.", "labels": ["Characteristics"]}
+{"text": "I started physical therapy last week.", "labels": ["Experiences"]}
+{"text": "I want to exercise more.", "labels": ["Goals or Plans"]}
+{"text": "I am looking to train for IT.", "labels": ["Goals or Plans"]}
+{"text": "I enjoy scuba diving.", "labels": ["Characteristics"]}
+{"text": "My name is Jeremy.", "labels": ["Characteristics"]}
+{"text": "I watch music videos.", "labels": ["Routines or Habits"]}
+{"text": "I play golf.", "labels": ["Routines or Habits"]}
+{"text": "I am a teacher of kindergarten.", "labels": ["Experiences"]}
+{"text": "I really enjoy what I do", "labels": ["Characteristics"]}
+{"text": "I like to cook and research vegan recipes.", "labels": ["Routines or Habits"]}
+{"text": "I don't have my vacation time.", "labels": ["Experiences"]}
+{"text": "I think organic gardening is very healthy and good for the wildlife.", "labels": ["Characteristics"]}
+{"text": "I babysit for three children for free.", "labels": ["Experiences"]}
+{"text": "I want to teach high school math.", "labels": ["Goals or Plans"]}
+{"text": "I'm going to school for civil engineering.", "labels": ["Goals or Plans"]}
+{"text": "I have a wife.", "labels": ["Experiences"]}
+{"text": "I like to travel, especially to Hawaii.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "My best friend is named John.", "labels": ["Experiences"]}
+{"text": "I wore braces as a child.", "labels": ["Experiences"]}
+{"text": "I am allergic to nuts.", "labels": ["Characteristics"]}
+{"text": "I do not have kids.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I prefer hiking to fishing.", "labels": ["Characteristics"]}
+{"text": "i go to the library.", "labels": ["Routines or Habits"]}
+{"text": "Charlie is my dog.", "labels": ["Experiences"]}
+{"text": "I take my daughter to see the animals after hours.", "labels": ["Relationship", "Routines or Habits"]}
+{"text": "I have siblings.", "labels": ["Experiences"]}
+{"text": "I live in Virginia.", "labels": ["Experiences"]}
+{"text": "My father-in-law is a hunter.", "labels": ["Experiences", "Relationship"]}
+{"text": "I am tech savvy.", "labels": ["Characteristics"]}
+{"text": "I learned fact about cultures painting on cave walls.", "labels": ["Experiences"]}
+{"text": "I try to hike every weekend.", "labels": ["Routines or Habits"]}
+{"text": "I believe in loving what you do.", "labels": ["Characteristics"]}
+{"text": "I have never traveled out of state or internationally.", "labels": ["Experiences"]}
+{"text": "I love fly fishing.", "labels": ["Characteristics", "Routines or Habits"]}
+{"text": "The surgery has been difficult, but I hope to be fully recovered in a month or two.", "labels": ["Experiences"]}
+{"text": "I like Nicki and Cardi.", "labels": ["Characteristics"]}
+{"text": "I am interested in speaker 1's music.", "labels": ["Goals or Plans"]}
+{"text": "I have a young niece.", "labels": ["Experiences"]}
+{"text": "I'm not very interested in comic books.", "labels": ["Characteristics"]}
+{"text": "I did not play college football.", "labels": ["Experiences"]}
+{"text": "My favorite ice cream is Mint Chocolate Chip.", "labels": ["Characteristics"]}
+{"text": "My name is granny jean.", "labels": ["Characteristics"]}
+{"text": "My dad likes to work on cars.", "labels": ["Characteristics", "Relationship"]}
+{"text": "I used to have three cats.", "labels": ["Experiences"]}
+{"text": "I saw a show on the history of guitars.", "labels": ["Experiences"]}
+{"text": "I like history.", "labels": ["Characteristics"]}
+{"text": "I am married to a man that likes to cook.", "labels": ["Experiences"]}
+{"text": "I work many hours in a week.", "labels": ["Characteristics", "Experiences"]}
+{"text": "My mother is a dentist and volunteers at a clinic.", "labels": ["Experiences", "Relationship"]}
+{"text": "I can learn alot from your family.", "labels": ["Characteristics"]}
+{"text": "I may want one.", "labels": ["Goals or Plans"]}
+{"text": "My favorite song by The Weeknd is \"Blinding Lights\"", "labels": ["Characteristics"]}
+{"text": "I had a burger and chocolate milkshake for lunch but with different statements.", "labels": ["Experiences"]}
+{"text": "I visit the city.", "labels": ["Routines or Habits"]}
+{"text": "I served in the Army.", "labels": ["Experiences"]}
+{"text": "I like horses.", "labels": ["Characteristics"]}
+{"text": "I've been reading about Disney World.", "labels": ["Experiences"]}
+{"text": "I own a small shop.", "labels": ["Experiences"]}
+{"text": "I quit my previous job.", "labels": ["Experiences"]}
+{"text": "I had read 'The Hunger Games'", "labels": ["Experiences"]}
+{"text": "I don't like little dogs.", "labels": ["Characteristics"]}
+{"text": "I listen to the radio occasionally.", "labels": ["Routines or Habits"]}
+{"text": "I don't like playing sports in the snow.", "labels": ["Characteristics"]}
+{"text": "I have an older Irish wolfhound dog.", "labels": ["Experiences"]}
+{"text": "I do not like to feel the others are trying to control me.", "labels": ["Characteristics"]}
+{"text": "My favorite candy is a Whatchamacallit.", "labels": ["Characteristics"]}
+{"text": "My husband works at a telecom.", "labels": ["Experiences"]}
+{"text": "I have a 17 foot key west boat.", "labels": ["Experiences"]}
+{"text": "I walk three miles home every night.", "labels": ["Routines or Habits"]}
+{"text": "I can stay in Washington and be near the water.", "labels": ["Experiences", "Routines or Habits"]}
+{"text": "I think my best results are when I have a producer help me.", "labels": ["Characteristics"]}
+{"text": "I am a teacher.", "labels": ["Characteristics", "Experiences"]}
+{"text": "I like Hershey bars.", "labels": ["Characteristics"]}
+{"text": "I love coffee.", "labels": ["Characteristics"]}
+{"text": "I like the band Muse.", "labels": ["Characteristics"]}
+{"text": "I live in Sacramento.", "labels": ["Experiences"]}
+{"text": "I went into martial arts after high school.", "labels": ["Experiences"]}
+{"text": "I attend Texas university.", "labels": ["Experiences"]}
+{"text": "I have a honda car with a stereo.", "labels": ["Experiences"]}
+{"text": "I have a dog names Titi that I take for walks.", "labels": ["Experiences"]}
